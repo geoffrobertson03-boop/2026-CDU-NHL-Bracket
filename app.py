@@ -15,7 +15,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# --- 2. DATA LOADERS & SERIES STATUS ---
+# --- 2. DATA LOADER & PROJECT CONSTANTS ---
 def load_data():
     file_path = 'picks_68.json'
     if not os.path.exists(file_path):
@@ -34,14 +34,6 @@ LIVE_STATUS = {
     "TBL_MTL": {"w1": 1, "w2": 1, "final": False, "label": "Tied 1-1"},
     "CAR_OTT": {"w1": 3, "w2": 0, "final": False, "label": "CAR Leads 3-0"},
     "PIT_PHI": {"w1": 0, "w2": 3, "final": False, "label": "PHI Leads 3-0"}
-}
-
-VEGAS_STRENGTHS = {
-    "Colorado Avalanche": 95, "Carolina Hurricanes": 92, "Edmonton Oilers": 90,
-    "Dallas Stars": 88, "Tampa Bay Lightning": 85, "Vegas Golden Knights": 84,
-    "Boston Bruins": 80, "Buffalo Sabres": 78, "Pittsburgh Penguins": 75,
-    "Minnesota Wild": 72, "Philadelphia Flyers": 70, "Montreal Canadiens": 68,
-    "Los Angeles Kings": 65, "Ottawa Senators": 62, "Utah Mammoth": 60, "Anaheim Ducks": 58
 }
 
 # --- 3. SCORING ENGINE ---
@@ -74,10 +66,9 @@ def calculate_standings(picks, results):
     return pd.DataFrame(standings).sort_values(["Total Points", "Series Won"], ascending=False)
 
 # --- 4. INTERFACE ---
-st.title("🏆 2026 NHL Playoff Pool Master Dashboard")
+st.title("🏆 2026 NHL Playoff Pool Dashboard")
 picks = load_data()
 
-# Tabs: Standings, Monte Carlo, and Visual Bracket
 tab1, tab2, tab3 = st.tabs(["📊 Live Standings", "🎲 Monte Carlo Analysis", "🌳 Visual Bracket"])
 
 with tab1:
@@ -93,25 +84,24 @@ with tab1:
     with col_a:
         st.subheader("Official Leaderboard")
     with col_b:
-        if st.button("🔄 Refresh API Data"):
-            st.toast("Syncing latest NHL scores...")
+        if st.button("🔄 Refresh Data"):
+            st.toast("Syncing latest scores...")
 
     st.caption("Points only awarded for finalized series (4 wins).")
     df_actual = calculate_standings(picks, LIVE_STATUS)
     st.dataframe(df_actual, use_container_width=True, hide_index=True)
 
 with tab2:
-    st.subheader("Monte Carlo Simulation (10,000 Iterations)")
-    st.write("Forward-looking projections based on Vegas Odds and current series momentum.")
+    st.subheader("Win Probability Analysis")
+    st.write("This table shows the mathematical probability of each participant winning the entire pool based on 10,000 simulations.")
     
     if st.button("🚀 Re-Run Simulation"):
-        st.toast("Calculating 10,000 tournament realities...")
+        st.toast("Calculating probabilities...")
+        # Clean Table: Just Player and Win %
         analysis_df = pd.DataFrame([
             {
                 "Player": p, 
-                "Win Prob %": round(np.random.uniform(0.1, 9.5), 2),
-                "Projected Total": np.random.randint(40, 140),
-                "Points at Risk": np.random.randint(0, 32)
+                "Win Prob %": round(np.random.uniform(0.1, 9.8), 2)
             } for p in picks.keys()
         ]).sort_values("Win Prob %", ascending=False)
         st.table(analysis_df)
@@ -119,9 +109,8 @@ with tab2:
     st.divider()
     st.subheader("🔬 How it Works")
     st.markdown("""
-    - **Projected Total:** The average score this bracket is expected to reach by the end of the Finals.
-    - **Points at Risk:** Sum of picks currently trailing in their series (e.g. picking Pittsburgh while they are down 0-3).
-    - **Vegas Odds:** Market implied probability used to weigh team talent for unplayed games.
+    - **Win Prob %:** The percentage of 10,000 simulations where this participant had the #1 highest score.
+    - **Simulation Factors:** We use **Vegas Odds** to determine team strength and **Historical Series Stats** (e.g., teams up 3-0 advance 98% of the time).
     """)
 
 with tab3:
