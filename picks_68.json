@@ -1,16 +1,16 @@
 {
     "Adam Saunders": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Minnesota Wild",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             6,
             7,
             6,
@@ -20,41 +20,38 @@
             6,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Vegas Golden Knights",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
-            6,
+        "R2_Games": [
+            7,
             6,
             6,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Tampa Bay Lightning"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 7
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 7
     },
     "Aime Boulac": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Ottawa Senators",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             7,
             6,
@@ -64,41 +61,38 @@
             7,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Tampa Bay Lightning",
             "Pittsburgh Penguins"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
             6,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Edmonton Oilers",
             "Tampa Bay Lightning"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Edmonton Oilers",
-        "Champ_games": 6
+        "CF_Games": 6,
+        "Champ_Team": "Edmonton Oilers",
+        "Champ_Games": 6
     },
     "Aliona Cebortari": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Boston Bruins",
-            null,
+            "Montreal Canadiens",
             "Ottawa Senators",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             7,
             7,
             7,
@@ -108,41 +102,38 @@
             7,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Boston Bruins",
             "Pittsburgh Penguins"
         ],
-        "R2_games": [
+        "R2_Games": [
+            7,
             6,
-            6,
-            6,
-            6
+            7,
+            7
         ],
-        "CF": [
+        "CF_Teams": [
             "Edmonton Oilers",
             "Pittsburgh Penguins"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Edmonton Oilers",
-        "Champ_games": 7
+        "CF_Games": 7,
+        "Champ_Team": "Edmonton Oilers",
+        "Champ_Games": 7
     },
     "Andrew Dahlin": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             7,
             6,
@@ -152,41 +143,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Vegas Golden Knights",
             "Buffalo Sabres",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
+            5,
             6,
-            6,
-            6,
+            7,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Buffalo Sabres"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 6
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 6
     },
     "Brent Barker": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Minnesota Wild",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Boston Bruins",
-            null,
+            "Tampa Bay Lightning",
             "Ottawa Senators",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             4,
             6,
             5,
@@ -196,41 +184,38 @@
             7,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Tampa Bay Lightning",
             "Ottawa Senators"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
-            6,
+            5,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Tampa Bay Lightning"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 6
+        "CF_Games": 5,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 6
     },
     "Cam Winters": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Montreal Canadiens",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             7,
             6,
@@ -240,41 +225,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Buffalo Sabres",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
-            6,
+            7,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Buffalo Sabres"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Buffalo Sabres",
-        "Champ_games": 7
+        "CF_Games": 6,
+        "Champ_Team": "Buffalo Sabres",
+        "Champ_Games": 7
     },
     "Cecilia Tse": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Philadelphia Flyers"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             7,
             6,
@@ -284,41 +266,38 @@
             6,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
+            5,
             6,
-            6,
-            6,
-            6
+            7,
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 7
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 7
     },
     "Chelsea Rommens": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Minnesota Wild",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Boston Bruins",
-            null,
+            "Montreal Canadiens",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             5,
             5,
@@ -328,41 +307,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Montreal Canadiens",
             "Pittsburgh Penguins"
         ],
-        "R2_games": [
+        "R2_Games": [
+            5,
             6,
-            6,
-            6,
-            6
+            5,
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Edmonton Oilers",
             "Montreal Canadiens"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Montreal Canadiens",
-        "Champ_games": 7
+        "CF_Games": 5,
+        "Champ_Team": "Montreal Canadiens",
+        "Champ_Games": 7
     },
     "Chris Arsenault": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Anaheim Ducks",
             "Boston Bruins",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Philadelphia Flyers"
         ],
-        "R1_games": [
+        "R1_Games": [
             4,
             6,
             5,
@@ -372,41 +348,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Anaheim Ducks",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
             6,
-            6
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 6
+        "CF_Games": 7,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 6
     },
     "Cindy Cameron": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Boston Bruins",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             6,
@@ -416,41 +389,38 @@
             6,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Boston Bruins",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
-            6,
+        "R2_Games": [
+            7,
             6,
             6,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Edmonton Oilers",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Edmonton Oilers",
-        "Champ_games": 6
+        "CF_Games": 7,
+        "Champ_Team": "Edmonton Oilers",
+        "Champ_Games": 6
     },
     "Dana Hanson": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Philadelphia Flyers"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             6,
@@ -460,41 +430,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Vegas Golden Knights",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
+            5,
             6,
             6,
-            6,
-            6
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 6
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 6
     },
     "Darrell Hvingelby": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Montreal Canadiens",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             4,
@@ -504,41 +471,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Montreal Canadiens",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
+            7,
             6,
             6,
-            6,
-            6
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Edmonton Oilers",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Edmonton Oilers",
-        "Champ_games": 5
+        "CF_Games": 6,
+        "Champ_Team": "Edmonton Oilers",
+        "Champ_Games": 5
     },
     "Deanna Moody": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Boston Bruins",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             6,
             6,
             7,
@@ -548,41 +512,38 @@
             6,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Vegas Golden Knights",
             "Tampa Bay Lightning",
             "Pittsburgh Penguins"
         ],
-        "R2_games": [
+        "R2_Games": [
+            5,
             6,
             6,
-            6,
-            6
+            7
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Pittsburgh Penguins"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Pittsburgh Penguins",
-        "Champ_games": 7
+        "CF_Games": 6,
+        "Champ_Team": "Pittsburgh Penguins",
+        "Champ_Games": 7
     },
     "Eliana Torres": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             4,
             5,
             6,
@@ -592,41 +553,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Tampa Bay Lightning",
             "Pittsburgh Penguins"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
             6,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Tampa Bay Lightning"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 7
+        "CF_Games": 7,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 7
     },
     "Emily Sischek": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Minnesota Wild",
             "Utah Mammoth",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Ottawa Senators",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             5,
@@ -636,41 +594,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Buffalo Sabres",
             "Pittsburgh Penguins"
         ],
-        "R2_games": [
+        "R2_Games": [
+            7,
             6,
-            6,
-            6,
-            6
+            5,
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Pittsburgh Penguins"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Pittsburgh Penguins",
-        "Champ_games": 6
+        "CF_Games": 6,
+        "Champ_Team": "Pittsburgh Penguins",
+        "Champ_Games": 6
     },
     "Eric Smith": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Minnesota Wild",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Montreal Canadiens",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             4,
             6,
             7,
@@ -680,41 +635,38 @@
             7,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Vegas Golden Knights",
             "Montreal Canadiens",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
+            5,
             6,
-            6,
-            6,
+            7,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 5
+        "CF_Games": 5,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 5
     },
     "Faye Byard": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Montreal Canadiens",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             4,
             7,
             5,
@@ -724,41 +676,38 @@
             7,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Montreal Canadiens",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
             6,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 7
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 7
     },
     "Gaurav Sharma": {
-        "R1": [
+        "R1_Teams": [
             "Los Angeles Kings",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Boston Bruins",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             6,
             5,
             6,
@@ -768,41 +717,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Los Angeles Kings",
             "Edmonton Oilers",
             "Boston Bruins",
             "Pittsburgh Penguins"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
-            6,
-            6
+            5,
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Edmonton Oilers",
             "Pittsburgh Penguins"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Edmonton Oilers",
-        "Champ_games": 7
+        "CF_Games": 5,
+        "Champ_Team": "Edmonton Oilers",
+        "Champ_Games": 7
     },
     "Gavin Carson": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Boston Bruins",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             5,
@@ -812,41 +758,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
-            6,
-            6
+            7,
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Tampa Bay Lightning"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 7
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 7
     },
     "Geoff Robertson": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Philadelphia Flyers"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             6,
@@ -856,41 +799,38 @@
             6,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Buffalo Sabres",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
-            6,
+            7,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 6
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 6
     },
     "Giovanna Brookes": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Philadelphia Flyers"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             7,
             6,
@@ -900,41 +840,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Vegas Golden Knights",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
+            4,
             6,
-            6,
-            6,
-            6
+            5,
+            7
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 7
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 7
     },
     "Gurtej Gill": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Anaheim Ducks",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             7,
             5,
@@ -944,41 +881,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Vegas Golden Knights",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
             6,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Tampa Bay Lightning"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 5
+        "CF_Games": 7,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 5
     },
     "Harsimran Singh": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Philadelphia Flyers"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             6,
@@ -988,41 +922,38 @@
             4,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Buffalo Sabres",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
-            6,
-            6
+            7,
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 6
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 6
     },
     "Jack Kehoe": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Minnesota Wild",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Montreal Canadiens",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             6,
             7,
             5,
@@ -1032,41 +963,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Vegas Golden Knights",
             "Montreal Canadiens",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
-            6,
+        "R2_Games": [
+            7,
             6,
             6,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Vegas Golden Knights",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Vegas Golden Knights",
-        "Champ_games": 7
+        "CF_Games": 6,
+        "Champ_Team": "Vegas Golden Knights",
+        "Champ_Games": 7
     },
     "James Palmer": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Minnesota Wild",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Montreal Canadiens",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             7,
             6,
@@ -1076,41 +1004,38 @@
             6,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Minnesota Wild",
             "Edmonton Oilers",
             "Buffalo Sabres",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
-            6,
-            6
+            7,
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Minnesota Wild",
             "Buffalo Sabres"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Buffalo Sabres",
-        "Champ_games": 6
+        "CF_Games": 6,
+        "Champ_Team": "Buffalo Sabres",
+        "Champ_Games": 6
     },
     "Jason DeGreeve": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Minnesota Wild",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             4,
             6,
             4,
@@ -1120,41 +1045,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Buffalo Sabres",
             "Pittsburgh Penguins"
         ],
-        "R2_games": [
+        "R2_Games": [
+            7,
             6,
-            6,
-            6,
+            7,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Buffalo Sabres"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 6
+        "CF_Games": 7,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 6
     },
     "Jason Frank": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Boston Bruins",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             6,
             6,
             4,
@@ -1164,41 +1086,38 @@
             4,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Tampa Bay Lightning",
             "Pittsburgh Penguins"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
-            6,
+            7,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Edmonton Oilers",
             "Tampa Bay Lightning"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Edmonton Oilers",
-        "Champ_games": 6
+        "CF_Games": 7,
+        "Champ_Team": "Edmonton Oilers",
+        "Champ_Games": 6
     },
     "Jason Middleton": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Minnesota Wild",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Montreal Canadiens",
             "Carolina Hurricanes",
             "Philadelphia Flyers"
         ],
-        "R1_games": [
+        "R1_Games": [
             4,
             7,
             5,
@@ -1208,41 +1127,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Minnesota Wild",
             "Vegas Golden Knights",
             "Buffalo Sabres",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
+            5,
             6,
             6,
-            6,
-            6
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Minnesota Wild",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Carolina Hurricanes",
-        "Champ_games": 6
+        "CF_Games": 5,
+        "Champ_Team": "Carolina Hurricanes",
+        "Champ_Games": 6
     },
     "Jayd McGrath": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             4,
             6,
             5,
@@ -1252,41 +1168,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Vegas Golden Knights",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
             6,
-            6
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Tampa Bay Lightning"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 5
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 5
     },
     "Jeff Calvert": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             6,
@@ -1296,41 +1209,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Vegas Golden Knights",
             "Buffalo Sabres",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
+            5,
             6,
             6,
-            6,
-            6
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 6
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 6
     },
     "Jeff Koch": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Montreal Canadiens",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             6,
@@ -1340,41 +1250,38 @@
             6,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Montreal Canadiens",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
             6,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 6
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 6
     },
     "Jeff Lawson": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             7,
             6,
@@ -1384,41 +1291,38 @@
             7,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
-            6,
+            7,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 7
+        "CF_Games": 7,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 7
     },
     "Jennifer Sexsmith": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Minnesota Wild",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             7,
             6,
@@ -1428,41 +1332,38 @@
             6,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
+            5,
             6,
-            6,
-            6,
-            6
+            7,
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Tampa Bay Lightning"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 6
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 6
     },
     "Jordan Vandean": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Minnesota Wild",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Boston Bruins",
-            null,
+            "Montreal Canadiens",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             7,
             7,
@@ -1472,41 +1373,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Vegas Golden Knights",
             "Boston Bruins",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
+            5,
             6,
-            6,
-            6,
+            7,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 6
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 6
     },
     "Kate Hunter": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Minnesota Wild",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             7,
             5,
@@ -1516,41 +1414,38 @@
             6,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
+            7,
             6,
             6,
-            6,
-            6
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 6
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 6
     },
     "Khrista Kellett": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             7,
             6,
@@ -1560,41 +1455,38 @@
             4,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
+            7,
             6,
             6,
-            6,
-            6
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Tampa Bay Lightning"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 7
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 7
     },
     "Kira Wasylak": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             7,
@@ -1604,41 +1496,38 @@
             6,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
-            6,
+            7,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Edmonton Oilers",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Carolina Hurricanes",
-        "Champ_games": 6
+        "CF_Games": 7,
+        "Champ_Team": "Carolina Hurricanes",
+        "Champ_Games": 6
     },
     "Kristi Yalbir": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Boston Bruins",
-            null,
+            "Montreal Canadiens",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             6,
             7,
             6,
@@ -1648,41 +1537,38 @@
             6,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Montreal Canadiens",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
             6,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Montreal Canadiens"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 7
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 7
     },
     "Margot McNeil": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Boston Bruins",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             6,
@@ -1692,41 +1578,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Boston Bruins",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
+            7,
             6,
-            6,
-            6,
+            7,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Edmonton Oilers",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Edmonton Oilers",
-        "Champ_games": 6
+        "CF_Games": 6,
+        "Champ_Team": "Edmonton Oilers",
+        "Champ_Games": 6
     },
     "Mark Rogers": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Minnesota Wild",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Boston Bruins",
-            null,
+            "Montreal Canadiens",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             7,
             7,
@@ -1736,41 +1619,38 @@
             6,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Vegas Golden Knights",
             "Montreal Canadiens",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
-            6,
+        "R2_Games": [
+            5,
             6,
             6,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Montreal Canadiens"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 6
+        "CF_Games": 7,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 6
     },
     "Merlin Lukose": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             7,
@@ -1780,41 +1660,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Buffalo Sabres",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
-            6,
+            5,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 6
+        "CF_Games": 5,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 6
     },
     "Mike Kenny": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Montreal Canadiens",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             7,
             6,
@@ -1824,41 +1701,38 @@
             6,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Montreal Canadiens",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
+            7,
             6,
             6,
-            6,
-            6
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 7
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 7
     },
     "Michelle White": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             6,
@@ -1868,41 +1742,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Buffalo Sabres",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
             6,
-            6
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 6
+        "CF_Games": 7,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 6
     },
     "Mike Hanson": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Boston Bruins",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Philadelphia Flyers"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             7,
@@ -1912,41 +1783,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Boston Bruins",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
-            6,
+            7,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Edmonton Oilers",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Edmonton Oilers",
-        "Champ_games": 6
+        "CF_Games": 6,
+        "Champ_Team": "Edmonton Oilers",
+        "Champ_Games": 6
     },
     "Morgan Wrishko": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             4,
             7,
             6,
@@ -1956,41 +1824,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Dallas Stars",
             "Edmonton Oilers",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
+            7,
             6,
             6,
-            6,
-            6
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Dallas Stars",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Dallas Stars",
-        "Champ_games": 6
+        "CF_Games": 6,
+        "Champ_Team": "Dallas Stars",
+        "Champ_Games": 6
     },
     "Moustafa Mohammadi": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Boston Bruins",
-            null,
+            "Montreal Canadiens",
             "Carolina Hurricanes",
             "Philadelphia Flyers"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             5,
@@ -2000,41 +1865,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Dallas Stars",
             "Edmonton Oilers",
             "Montreal Canadiens",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
-            6,
+        "R2_Games": [
+            7,
             6,
             6,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Edmonton Oilers",
             "Montreal Canadiens"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Montreal Canadiens",
-        "Champ_games": 6
+        "CF_Games": 6,
+        "Champ_Team": "Montreal Canadiens",
+        "Champ_Games": 6
     },
     "Nathalie Babineau": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Montreal Canadiens",
             "Ottawa Senators",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             5,
@@ -2044,41 +1906,38 @@
             7,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Vegas Golden Knights",
             "Buffalo Sabres",
             "Ottawa Senators"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
-            6,
+            5,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Ottawa Senators"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 5
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 5
     },
     "Nick Fournie": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             5,
@@ -2088,41 +1947,38 @@
             7,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Vegas Golden Knights",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
+            7,
             6,
-            6,
-            6,
+            7,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 6
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 6
     },
     "Nicole Baird": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             6,
@@ -2132,41 +1988,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Tampa Bay Lightning",
             "Pittsburgh Penguins"
         ],
-        "R2_games": [
+        "R2_Games": [
+            7,
             6,
-            6,
-            6,
+            7,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Tampa Bay Lightning"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 7
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 7
     },
     "Pamela Bremer": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Montreal Canadiens",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             7,
             6,
@@ -2176,41 +2029,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Montreal Canadiens",
             "Pittsburgh Penguins"
         ],
-        "R2_games": [
+        "R2_Games": [
+            7,
             6,
-            6,
-            6,
+            5,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Pittsburgh Penguins"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Pittsburgh Penguins",
-        "Champ_games": 7
+        "CF_Games": 6,
+        "Champ_Team": "Pittsburgh Penguins",
+        "Champ_Games": 7
     },
     "Patrick Wong": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Montreal Canadiens",
             "Ottawa Senators",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             5,
@@ -2220,41 +2070,38 @@
             7,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Vegas Golden Knights",
             "Buffalo Sabres",
             "Ottawa Senators"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
-            6,
+            5,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Ottawa Senators"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 5
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 5
     },
     "Peter Kret": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Minnesota Wild",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Philadelphia Flyers"
         ],
-        "R1_games": [
+        "R1_Games": [
             6,
             7,
             5,
@@ -2264,41 +2111,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
-            6,
-            6
+            5,
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Carolina Hurricanes",
-        "Champ_games": 5
+        "CF_Games": 5,
+        "Champ_Team": "Carolina Hurricanes",
+        "Champ_Games": 5
     },
     "Phillip Leibrecht": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             6,
@@ -2308,41 +2152,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Vegas Golden Knights",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
-            6,
+        "R2_Games": [
+            7,
             6,
             6,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Tampa Bay Lightning"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 6
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 6
     },
     "Ranjodh Pandher": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             6,
@@ -2352,41 +2193,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Buffalo Sabres",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
-            6,
-            6
+            7,
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 6
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 6
     },
     "Richard Thiessen": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             4,
             6,
             5,
@@ -2396,41 +2234,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
-            6,
-            6
+            4,
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Tampa Bay Lightning"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 7
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 7
     },
     "Rob Kopitar": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Utah Mammoth",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Montreal Canadiens",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             6,
@@ -2440,41 +2275,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Buffalo Sabres",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
-            6,
+            7,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Buffalo Sabres"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 6
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 6
     },
     "Sarah Hyslop": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Utah Mammoth",
             "Edmonton Oilers",
             "Boston Bruins",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             4,
             6,
@@ -2484,41 +2316,38 @@
             6,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Dallas Stars",
             "Edmonton Oilers",
             "Tampa Bay Lightning",
             "Pittsburgh Penguins"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
-            6,
+            7,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Dallas Stars",
             "Tampa Bay Lightning"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Dallas Stars",
-        "Champ_games": 6
+        "CF_Games": 5,
+        "Champ_Team": "Dallas Stars",
+        "Champ_Games": 6
     },
     "Sean McLeod": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Utah Mammoth",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Montreal Canadiens",
             "Ottawa Senators",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             6,
@@ -2528,41 +2357,38 @@
             7,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Montreal Canadiens",
             "Ottawa Senators"
         ],
-        "R2_games": [
-            6,
+        "R2_Games": [
+            7,
             6,
             6,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Montreal Canadiens"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 6
+        "CF_Games": 7,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 6
     },
     "Shezad Rajan": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             6,
@@ -2572,41 +2398,38 @@
             7,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Vegas Golden Knights",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
+            7,
             6,
-            6,
-            6,
+            7,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Tampa Bay Lightning"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 7
+        "CF_Games": 7,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 7
     },
     "Siya Chokshi": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Anaheim Ducks",
             "Boston Bruins",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             4,
             6,
             7,
@@ -2616,41 +2439,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Vegas Golden Knights",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
+            7,
             6,
-            6,
-            6,
-            6
+            5,
+            4
         ],
-        "CF": [
+        "CF_Teams": [
             "Vegas Golden Knights",
             "Tampa Bay Lightning"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Vegas Golden Knights",
-        "Champ_games": 7
+        "CF_Games": 6,
+        "Champ_Team": "Vegas Golden Knights",
+        "Champ_Games": 7
     },
     "Stan Vu": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Montreal Canadiens",
             "Ottawa Senators",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             7,
@@ -2660,41 +2480,38 @@
             7,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Montreal Canadiens",
             "Pittsburgh Penguins"
         ],
-        "R2_games": [
+        "R2_Games": [
+            7,
             6,
-            6,
-            6,
+            7,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Edmonton Oilers",
             "Montreal Canadiens"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Edmonton Oilers",
-        "Champ_games": 7
+        "CF_Games": 6,
+        "Champ_Team": "Edmonton Oilers",
+        "Champ_Games": 7
     },
     "Tammy Stuckey": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             4,
             6,
             5,
@@ -2704,41 +2521,38 @@
             4,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
             6,
-            6
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 7
+        "CF_Games": 7,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 7
     },
     "Terry Zajac": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             4,
             6,
             4,
@@ -2748,41 +2562,38 @@
             4,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
+            7,
             6,
             6,
-            6,
-            6
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Carolina Hurricanes",
-        "Champ_games": 7
+        "CF_Games": 6,
+        "Champ_Team": "Carolina Hurricanes",
+        "Champ_Games": 7
     },
     "TJ Matheson": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Montreal Canadiens",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             7,
             5,
@@ -2792,41 +2603,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Montreal Canadiens",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
-            6,
+        "R2_Games": [
+            7,
             6,
             6,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Edmonton Oilers",
             "Montreal Canadiens"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Montreal Canadiens",
-        "Champ_games": 6
+        "CF_Games": 6,
+        "Champ_Team": "Montreal Canadiens",
+        "Champ_Games": 6
     },
     "Todd Gustafsson": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Montreal Canadiens",
             "Carolina Hurricanes",
             "Pittsburgh Penguins"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             7,
             6,
@@ -2836,41 +2644,38 @@
             6,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Vegas Golden Knights",
             "Buffalo Sabres",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
+            7,
             6,
-            6,
-            6,
-            6
+            7,
+            5
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Carolina Hurricanes"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 6
+        "CF_Games": 6,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 6
     },
     "Willie Ma": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Dallas Stars",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Philadelphia Flyers"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             6,
             5,
@@ -2880,41 +2685,38 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Buffalo Sabres",
             "Philadelphia Flyers"
         ],
-        "R2_games": [
+        "R2_Games": [
+            7,
             6,
-            6,
-            6,
-            6
+            7,
+            7
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Philadelphia Flyers"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Philadelphia Flyers",
-        "Champ_games": 6
+        "CF_Games": 6,
+        "Champ_Team": "Philadelphia Flyers",
+        "Champ_Games": 6
     },
     "Winnie Wong": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Minnesota Wild",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Boston Bruins",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Philadelphia Flyers"
         ],
-        "R1_games": [
+        "R1_Games": [
             5,
             7,
             6,
@@ -2924,41 +2726,38 @@
             6,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Colorado Avalanche",
             "Edmonton Oilers",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
-            6,
+        "R2_Games": [
+            7,
             6,
             6,
             6
         ],
-        "CF": [
+        "CF_Teams": [
             "Colorado Avalanche",
             "Tampa Bay Lightning"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Colorado Avalanche",
-        "Champ_games": 6
+        "CF_Games": 7,
+        "Champ_Team": "Colorado Avalanche",
+        "Champ_Games": 6
     },
     "Xin Zhang": {
-        "R1": [
+        "R1_Teams": [
             "Colorado Avalanche",
             "Minnesota Wild",
             "Vegas Golden Knights",
             "Edmonton Oilers",
             "Buffalo Sabres",
-            null,
+            "Tampa Bay Lightning",
             "Carolina Hurricanes",
             "Philadelphia Flyers"
         ],
-        "R1_games": [
+        "R1_Games": [
             4,
             7,
             6,
@@ -2968,27 +2767,24 @@
             5,
             6
         ],
-        "R2": [
+        "R2_Teams": [
             "Minnesota Wild",
             "Edmonton Oilers",
             "Tampa Bay Lightning",
             "Carolina Hurricanes"
         ],
-        "R2_games": [
+        "R2_Games": [
             6,
             6,
             6,
-            6
+            4
         ],
-        "CF": [
+        "CF_Teams": [
             "Minnesota Wild",
             "Tampa Bay Lightning"
         ],
-        "CF_games": [
-            6,
-            6
-        ],
-        "Champ": "Tampa Bay Lightning",
-        "Champ_games": 5
+        "CF_Games": 5,
+        "Champ_Team": "Tampa Bay Lightning",
+        "Champ_Games": 5
     }
 }
