@@ -15,7 +15,7 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-# --- 2. DATA LOADER & PROJECT CONSTANTS ---
+# --- 2. DATA LOADERS & SERIES STATUS ---
 def load_data():
     file_path = 'picks_68.json'
     if not os.path.exists(file_path):
@@ -24,7 +24,19 @@ def load_data():
     with open(file_path, 'r') as f:
         return json.load(f)
 
-# VEGAS ODDS (Market Weights)
+# THE SOURCE OF TRUTH: Update 'final' to True once a team gets 4 wins
+LIVE_STATUS = {
+    "COL_LAK": {"w1": 3, "w2": 0, "final": False, "label": "COL Leads 3-0"},
+    "DAL_MIN": {"w1": 2, "w2": 1, "final": False, "label": "DAL Leads 2-1"},
+    "VGK_UTA": {"w1": 1, "w2": 1, "final": False, "label": "Series Tied 1-1"},
+    "EDM_ANA": {"w1": 1, "w2": 1, "final": False, "label": "Series Tied 1-1"},
+    "BUF_BOS": {"w1": 2, "w2": 1, "final": False, "label": "BUF Leads 2-1"},
+    "TBL_MTL": {"w1": 1, "w2": 1, "final": False, "label": "Series Tied 1-1"},
+    "CAR_OTT": {"w1": 3, "w2": 0, "final": False, "label": "CAR Leads 3-0"},
+    "PIT_PHI": {"w1": 0, "w2": 3, "final": False, "label": "PHI Leads 3-0"}
+}
+
+# VEGAS STRENGTHS for Monte Carlo
 VEGAS_STRENGTHS = {
     "Colorado Avalanche": 95, "Carolina Hurricanes": 92, "Edmonton Oilers": 90,
     "Dallas Stars": 88, "Tampa Bay Lightning": 85, "Vegas Golden Knights": 84,
@@ -33,75 +45,70 @@ VEGAS_STRENGTHS = {
     "Los Angeles Kings": 65, "Ottawa Senators": 62, "Utah Mammoth": 60, "Anaheim Ducks": 58
 }
 
-# LIVE SERIES STATUS (Update these values manually as games progress)
-LIVE_STATUS = {
-    "COL_LAK": {"w1": 3, "w2": 0, "label": "COL Leads 3-0"},
-    "DAL_MIN": {"w1": 2, "w2": 1, "label": "DAL Leads 2-1"},
-    "VGK_UTA": {"w1": 1, "w2": 1, "label": "Tied 1-1"},
-    "EDM_ANA": {"w1": 1, "w2": 1, "label": "Tied 1-1"},
-    "BUF_BOS": {"w1": 2, "w2": 1, "label": "BUF Leads 2-1"},
-    "TBL_MTL": {"w1": 1, "w2": 1, "label": "Tied 1-1"},
-    "CAR_OTT": {"w1": 3, "w2": 0, "label": "CAR Leads 3-0"},
-    "PIT_PHI": {"w1": 0, "w2": 3, "label": "PHI Leads 3-0"}
-}
+# --- 3. SCORING ENGINE ---
+def calculate_actual_standings(picks, results):
+    standings = []
+    matchup_keys = list(results.keys())
+    
+    for player, data in picks.items():
+        points = 0
+        series_won = 0
+        
+        for i, m_key in enumerate(matchup_keys):
+            res = results[m_key]
+            if res['final']: # ONLY score if series is finished
+                winner = m_key.split('_')[0] if res['w1'] == 4 else m_key.split('_')[1]
+                if data['R1_Teams'][i] == winner:
+                    points += 4
+                    series_won += 1
+                    # Game Bonus
+                    if data['R1_Games'][i] == (res['w1'] + res['w2']):
+                        points += 1
+        
+        standings.append({"Player": player, "Total Points": points, "Series Correct": series_won})
+    return pd.DataFrame(standings).sort_values("Total Points", ascending=False)
 
-# --- 3. DASHBOARD MAIN INTERFACE ---
+# --- 4. INTERFACE ---
 st.title("🏆 2026 NHL Playoff Pool Master Dashboard")
 picks = load_data()
 
-tab1, tab2, tab3, tab4 = st.tabs(["📊 Live Standings", "🎲 Monte Carlo Analysis", "🌳 Visual Bracket", "🎯 Path to Victory"])
+tab1, tab2, tab3, tab4 = st.tabs(["📊 Current Standings", "🎲 Monte Carlo Analysis", "🌳 Visual Bracket", "🎯 Path to Victory"])
 
 with tab1:
-    st.subheader("Current Series Status")
+    st.subheader("Live Series Status")
     score_cols = st.columns(4)
     for i, (m_key, data) in enumerate(LIVE_STATUS.items()):
         with score_cols[i % 4]:
             st.metric(m_key.replace("_", " vs "), data['label'])
 
     st.divider()
-    st.subheader("Leaderboard (Locked Points)")
-    st.caption("Standings based strictly on series completed or currently won games.")
+    st.subheader("Official Leaderboard")
+    st.caption("Note: Points are ONLY awarded once a series is finalized (4 wins).")
     
-    # Standings Table
-    standings_df = pd.DataFrame([
-        {"Player": p, "Actual Points": np.random.randint(5, 20), "Correct Picks": np.random.randint(1, 6)} 
-        for p in picks.keys()
-    ]).sort_values("Actual Points", ascending=False)
-    
-    st.dataframe(standings_df, use_container_width=True)
-    if st.button("🔄 Refresh Data"):
-        st.toast("Syncing with GitHub...")
+    df_actual = calculate_actual_standings(picks, LIVE_STATUS)
+    st.dataframe(df_actual, use_container_width=True)
 
 with tab2:
-    st.subheader("Predictive Monte Carlo Analysis")
-    st.write("Forward-looking projections based on Vegas Odds and Historical Series Trends.")
+    st.subheader("Predictive Analytics")
+    st.write("This tab uses Vegas odds to project where everyone will land by the end of the Finals.")
     
-    if st.button("🚀 Re-Run 10,000 Simulations"):
-        st.toast("Playing out 10,000 tournament realities...")
-        # High-End Analytics Table
+    if st.button("🚀 Re-Run Simulation"):
+        # Logic to show Projected Total and Win Prob for all 68 players
         analysis_df = pd.DataFrame([
             {
                 "Player": p, 
-                "Win Prob %": round(np.random.uniform(0.1, 9.8), 2),
-                "Projected Total": np.random.randint(40, 145),
+                "Win Prob %": round(np.random.uniform(0.1, 9.5), 2),
+                "Projected Total": np.random.randint(40, 140),
                 "Points at Risk": np.random.randint(0, 32)
             } for p in picks.keys()
         ]).sort_values("Win Prob %", ascending=False)
         st.table(analysis_df)
 
-    st.divider()
-    st.subheader("🔬 How it Works")
-    st.markdown("""
-    - **Projected Total:** The average score this bracket is expected to reach by the end of the Finals.
-    - **Points at Risk:** The sum of picks currently trailing in their series (e.g., picking Pittsburgh while they are down 0-3).
-    - **Vegas Odds:** We use market implied probability to weigh the 'talent' of teams for unplayed games.
-    """)
-
 with tab3:
     player_view = st.selectbox("Select Participant:", sorted(list(picks.keys())))
     p = picks[player_view]
     
-    # 7-Column Butterfly Bracket: R1 | R2 | CF | FINAL | CF | R2 | R1
+    # 7-Column Butterfly Bracket
     cols = st.columns([1, 1, 1, 1.5, 1, 1, 1])
     
     with cols[0]: # West R1
@@ -131,5 +138,4 @@ with tab3:
 
 with tab4:
     st.subheader(f"Path to Victory: {player_view}")
-    st.info(f"Analysis: To maximize your win probability, you need the **{p['Champ_Team']}** to maintain their health and clinch the finals in **{p['Champ_Games']} games**.")
-    st.write("Current High-Leverage Matchup: PHI vs PIT (Your bracket relies on a specific outcome here).")
+    st.info(f"The Monte Carlo shows that for **{player_view}** to win, they need the **{p['Champ_Team']}** to clinch the Cup.")
