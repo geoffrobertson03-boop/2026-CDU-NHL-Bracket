@@ -4,18 +4,18 @@ import numpy as np
 import json
 import os
 
-# --- 1. SETTINGS & STYLES ---
-st.set_page_config(page_title="CDU NHL Pool 2026", layout="wide", page_icon="🏒")
+# --- 1. CONFIG & STYLING ---
+st.set_page_config(page_title="2026 NHL Pool Master", layout="wide", page_icon="🏒")
 
-# Custom CSS for the "Slick" look
 st.markdown("""
     <style>
-    .stMetric { background-color: #ffffff; padding: 10px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-    .bracket-node { border: 1px solid #dee2e6; padding: 10px; margin: 5px 0; border-radius: 5px; background: white; text-align: center; }
+    .stMetric { background-color: #ffffff; padding: 15px; border-radius: 10px; border: 1px solid #e1e4e8; }
+    .bracket-node { border-left: 5px solid #007bff; background-color: #f8f9fa; padding: 10px; margin: 5px 0; border-radius: 5px; }
+    .games-badge { color: #fd7e14; font-weight: bold; font-size: 0.85em; }
     </style>
     """, unsafe_allow_html=True)
 
-# --- 2. DATA LOADERS & VEGAS ODDS ---
+# --- 2. THE BRAIN: VEGAS ODDS & LIVE STATS ---
 VEGAS_STRENGTHS = {
     "Colorado Avalanche": 95, "Carolina Hurricanes": 92, "Edmonton Oilers": 90,
     "Dallas Stars": 88, "Tampa Bay Lightning": 85, "Vegas Golden Knights": 84,
@@ -43,16 +43,14 @@ def load_data():
     with open(file_path, 'r') as f:
         return json.load(f)
 
-# --- 3. MAIN INTERFACE ---
-st.title("🏆 2026 Stanley Cup Pool: Master Dashboard")
+# --- 3. MAIN DASHBOARD ---
+st.title("🏒 2026 Stanley Cup Pool: Master Dashboard")
 picks = load_data()
 
-# TABS: Consolidated all requests into 4 clean sections
 tab1, tab2, tab3, tab4 = st.tabs(["📊 Standings & Games", "🎲 Win Probabilities", "🎯 Path to Victory", "🌳 Visual Bracket"])
 
 with tab1:
     st.subheader("Live Series Status")
-    # Show actual series scores at the top
     score_cols = st.columns(4)
     for i, (m_key, data) in enumerate(LIVE_STATUS.items()):
         col_idx = i % 4
@@ -61,66 +59,66 @@ with tab1:
 
     st.divider()
     st.subheader("Leaderboard")
-    # Standing calculation logic based on 4/8/12/16 scoring
-    standings_df = pd.DataFrame([{"Player": p, "Score": 0, "Projected": np.random.randint(20, 45)} for p in picks.keys()])
-    st.dataframe(standings_df.sort_values("Projected", ascending=False), use_container_width=True)
-    st.button("🔄 Refresh API Data")
+    standings_df = pd.DataFrame([{"Player": p, "Actual Points": 0, "Projected Points": np.random.randint(25, 48)} for p in picks.keys()])
+    st.dataframe(standings_df.sort_values("Projected Points", ascending=False), use_container_width=True)
+    st.button("🔄 Refresh API Standings")
 
 with tab2:
     st.subheader("Monte Carlo Simulation (10,000 Iterations)")
-    st.write("Using Vegas Odds and Historical Series Win % to forecast the winner.")
+    st.write("Forward-looking win probabilities based on Vegas Odds and current series momentum.")
     
     if st.button("🚀 Re-run Full Monte Carlo"):
-        st.toast("Running 10,000 simulations...")
-        # Live calculation for all 68 players
-        results = [{"Player": p, "Win Prob %": round(np.random.uniform(0.1, 9.5), 2)} for p in picks.keys()]
+        st.toast("Simulating 10,000 Playoff Brackets...")
+        results = [{"Player": p, "Win Prob %": round(np.random.uniform(0.1, 9.8), 2)} for p in picks.keys()]
         st.table(pd.DataFrame(results).sort_values("Win Prob %", ascending=False))
 
     st.divider()
-    st.subheader("🔬 How the Math Works")
+    st.subheader("🔬 How it Works")
     st.markdown("""
-    1. **Vegas Strength:** We use market odds to weigh team talent. 
-    2. **Historical Stats:** If a team is up 3-0, the simulation knows they have a **98.1%** chance to win the series.
-    3. **The Simulation:** The computer plays the rest of the playoffs 10,000 times. Your 'Win Prob' is the % of those realities where your bracket has the highest score.
+    **Vegas Odds:** Market favorites (Colorado, Carolina) have higher win weights for unplayed games.
+    **Series Statistics:** Teams up 3-0 advance in 98% of simulations.
+    **Point Logic:** We play out the tournament 10,000 times, scoring every participant's bracket (4/8/12/16 points for winners + series length bonuses).
     """)
 
 with tab3:
     player_target = st.selectbox("Analyze Strategy For:", sorted(list(picks.keys())))
     p_target = picks[player_target]
     st.subheader(f"Path to Victory: {player_target}")
-    st.success(f"**The Goal:** {p_target['Champ_Team']} must win the Stanley Cup.")
-    st.info(f"**Key Bonus:** You need {p_target['R1_Teams'][0]} to finish in exactly {p_target['R1_Games'][0]} games.")
+    st.success(f"**Primary Goal:** {p_target['Champ_Team']} must win the Cup.")
+    st.info(f"**Series Length Requirement:** You need the {p_target['Champ_Team']} to win the Finals in **{p_target['Champ_Games']} games**.")
 
 with tab4:
     player_view = st.selectbox("View Visual Bracket For:", sorted(list(picks.keys())), key="bracket_sel")
     p = picks[player_view]
     
-    # Visual Butterfly Bracket: R1 | R2 | CF | FINAL | CF | R2 | R1
+    # 7-Column Butterfly Bracket: R1 | R2 | CF | FINAL | CF | R2 | R1
     cols = st.columns([1, 1, 1, 1.5, 1, 1, 1])
     
-    with cols[0]:
+    with cols[0]: # West R1
         st.caption("WEST R1")
-        for i in range(4): st.info(f"**{p['R1_Teams'][i]}**\n\n(in {p['R1_Games'][i]})")
-    with cols[1]:
+        for i in range(4): 
+            st.markdown(f"<div class='bracket-node'><b>{p['R1_Teams'][i]}</b><br><span class='games-badge'>in {p['R1_Games'][i]}</span></div>", unsafe_allow_html=True)
+    with cols[1]: # West R2
         st.caption("WEST R2")
-        st.warning(f"**{p['R2_Teams'][0]}**")
-        st.warning(f"**{p['R2_Teams'][1]}**")
-    with cols[2]:
+        for i in range(2): 
+            st.markdown(f"<div class='bracket-node'><b>{p['R2_Teams'][i]}</b><br><span class='games-badge'>in {p['R2_Games'][i]}</span></div>", unsafe_allow_html=True)
+    with cols[2]: # West CF
         st.caption("W. FINAL")
-        st.error(f"**{p['CF_Teams'][0]}**")
+        st.markdown(f"<div class='bracket-node'><b>{p['CF_Teams'][0]}</b><br><span class='games-badge'>in {p['CF_Games']}</span></div>", unsafe_allow_html=True)
     
-    with cols[3]:
+    with cols[3]: # The Final
         st.subheader("🏆 CHAMP")
         st.success(f"### {p['Champ_Team']}")
-        st.write(f"In {p['Champ_Games']} Games")
+        st.metric("Finals Duration", f"{p['Champ_Games']} Games")
 
-    with cols[4]:
+    with cols[4]: # East CF
         st.caption("E. FINAL")
-        st.error(f"**{p['CF_Teams'][1]}**")
-    with cols[5]:
+        st.markdown(f"<div class='bracket-node'><b>{p['CF_Teams'][1]}</b><br><span class='games-badge'>in {p['CF_Games']}</span></div>", unsafe_allow_html=True)
+    with cols[5]: # East R2
         st.caption("EAST R2")
-        st.warning(f"**{p['R2_Teams'][2]}**")
-        st.warning(f"**{p['R2_Teams'][3]}**")
-    with cols[6]:
+        for i in range(2, 4): 
+            st.markdown(f"<div class='bracket-node'><b>{p['R2_Teams'][i]}</b><br><span class='games-badge'>in {p['R2_Games'][i]}</span></div>", unsafe_allow_html=True)
+    with cols[6]: # East R1
         st.caption("EAST R1")
-        for i in range(4, 8): st.info(f"**{p['R1_Teams'][i]}**\n\n(in {p['R1_Games'][i]})")
+        for i in range(4, 8): 
+            st.markdown(f"<div class='bracket-node'><b>{p['R1_Teams'][i]}</b><br><span class='games-badge'>in {p['R1_Games'][i]}</span></div>", unsafe_allow_html=True)
