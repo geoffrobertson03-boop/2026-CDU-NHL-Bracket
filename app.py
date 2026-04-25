@@ -3,14 +3,14 @@ import json
 import os
 
 # 1. Page Config
-st.set_page_config(page_title="CDU Pool 2026", layout="wide")
+st.set_page_config(page_title="CDU 2026 NHL BRACKET", layout="wide", page_icon="🏒")
 
 # 2. Secure Login Logic
 if "authenticated" not in st.session_state:
     st.session_state["authenticated"] = False
 
 def login():
-    st.title("🏒 2026 NHL Pool Login")
+    st.title("🏒 CDU 2026 NHL BRACKET: Login")
     # Using a form helps prevent "flickering" or accidental state loss
     with st.form("login_form"):
         pwd = st.text_input("Enter Pool Password", type="password")
@@ -50,17 +50,16 @@ else:
         st.error("### ❌ Critical Error: picks_68.json not found!")
         st.markdown("""
         **Troubleshooting Steps:**
-        1. Ensure your file is named exactly `picks_68.json` (all lowercase, underscore used).
-        2. Ensure the file is in the **root folder** of your GitHub repository.
-        3. Check if the file uploaded correctly and isn't empty.
+        1. Ensure your file is named exactly `picks_68.json`.
+        2. Ensure the file is in the root folder of your GitHub repository.
         """)
     else:
-        st.title("🏆 CDU Stanley Cup Dashboard")
+        st.title("🏆 CDU 2026 NHL BRACKET")
         st.success(f"Successfully connected! Loaded data for **{len(picks)}** participants.")
         
         # Skeleton for Stage 2
         tab1, tab2 = st.tabs(["📊 Standings & Pulse", "🌳 Visual Bracket"])
         with tab1:
-            st.info("Stage 1 complete. Ready to build the Leaderboard and API Pulse.")
+            st.info("Foundation verified. Ready for Stage 2: Leaderboard & Scoring.")
         with tab2:
-            st.info("Stage 1 complete. Ready to build the Butterfly Bracket visualization.")
+            st.info("Foundation verified. Ready for Stage 3: Visual Butterfly Bracket.")
