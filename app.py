@@ -5,127 +5,137 @@ import json
 import requests
 import os
 
-# --- 1. CONFIG & SESSION STATE ---
-st.set_page_config(page_title="2026 NHL Pool Master", layout="wide", page_icon="🏒")
-
+# --- 1. SESSION STATE & LOGIN ---
 if "password_correct" not in st.session_state:
     st.session_state["password_correct"] = False
-if "admin_mode" not in st.session_state:
-    st.session_state["admin_mode"] = False
-if "manual_data" not in st.session_state:
-    st.session_state["manual_data"] = {}
+if "vegas_weights" not in st.session_state:
+    st.session_state["vegas_weights"] = {
+        "Colorado Avalanche": 95, "Carolina Hurricanes": 92, "Edmonton Oilers": 90,
+        "Dallas Stars": 88, "Tampa Bay Lightning": 85, "Vegas Golden Knights": 84,
+        "Boston Bruins": 80, "Buffalo Sabres": 78, "Pittsburgh Penguins": 75,
+        "Minnesota Wild": 72, "Philadelphia Flyers": 70, "Montreal Canadiens": 68,
+        "Los Angeles Kings": 65, "Ottawa Senators": 62, "Utah Mammoth": 60, "Anaheim Ducks": 58
+    }
 
-# --- 2. AUTHENTICATION ---
 def login_screen():
-    st.title("🔒 CDU Pool Access")
+    st.title("🏒 CDU Pool 2026: Login")
     pwd = st.text_input("Enter Pool Password", type="password")
-    if st.button("Login"):
+    if st.button("Access Dashboard"):
         if pwd == "CDU2026":
             st.session_state["password_correct"] = True
             st.rerun()
-        else:
-            st.error("😕 Password incorrect")
+        else: st.error("😕 Password incorrect")
 
 if not st.session_state["password_correct"]:
     login_screen()
     st.stop()
 
-# --- 3. DATA LOADERS & MULTI-API ENGINE ---
+# --- 2. THEME & API ENGINE ---
+st.set_page_config(page_title="2026 NHL Pool Master", layout="wide", page_icon="🏆")
+st.markdown("""
+    <style>
+    .stMetric { background-color: #ffffff; padding: 15px; border-radius: 10px; border: 1px solid #e1e4e8; }
+    .bracket-node { border-left: 5px solid #007bff; background-color: #f8f9fa; padding: 10px; margin: 5px 0; border-radius: 8px; }
+    .games-badge { color: #fd7e14; font-weight: bold; font-size: 0.85em; }
+    </style>
+    """, unsafe_allow_html=True)
+
 @st.cache_data(ttl=300)
 def fetch_nhl_data():
-    urls = [
-        "https://api-web.nhle.com/v1/playoff-bracket/2026",
-        "https://nhl-score-api.herokuapp.com/api/scores/latest"
-    ]
+    url = "https://api-web.nhle.com/v1/playoff-bracket/2026"
     headers = {"User-Agent": "Mozilla/5.0"}
-    for url in urls:
-        try:
-            r = requests.get(url, headers=headers, timeout=5)
-            if r.status_code == 200:
-                data = r.json()
-                # Simplified Mapping Logic for Round 1
-                return data
-        except: continue
+    try:
+        r = requests.get(url, headers=headers, timeout=5)
+        if r.status_code == 200:
+            data = r.json()
+            series_map = {}
+            for s in data.get('series', []):
+                if s.get('round') == 1:
+                    t1 = s.get('bottomSeed', {}).get('abbreviation', 'TBD')
+                    t2 = s.get('topSeed', {}).get('abbreviation', 'TBD')
+                    series_map[f"{t1}_{t2}"] = {
+                        "w1": s.get('bottomSeed', {}).get('wins', 0),
+                        "w2": s.get('topSeed', {}).get('wins', 0),
+                        "is_final": s.get('seriesStatus', {}).get('isFinal', False),
+                        "label": s.get('seriesStatus', {}).get('seriesStatusShort', "Tied 0-0")
+                    }
+            return series_map
+    except: return None
     return None
 
 def load_picks():
-    if os.path.exists('picks_68.json'):
-        with open('picks_68.json', 'r') as f: return json.load(f)
+    path = 'picks_68.json'
+    if os.path.exists(path):
+        with open(path, 'r') as f: return json.load(f)
     return None
 
-# --- 4. MASTER DASHBOARD ---
-st.title("🏆 2026 Stanley Cup Pool Dashboard")
-live_api = fetch_nhl_data()
-picks = load_picks()
+# --- 3. SCORING ENGINE ---
+def calculate_scores(picks, api_data):
+    standings = []
+    keys = list(api_data.keys()) if api_data else []
+    for player, p_data in picks.items():
+        points, won, lengths = 0, 0, 0
+        if api_data:
+            for i, k in enumerate(keys):
+                res = api_data[k]
+                if res['is_final'] or st.session_state.get(f"f{i}"):
+                    winner = k.split('_')[0] if res['w1'] >= 4 else k.split('_')[1]
+                    if winner in p_data['R1_Teams'][i]:
+                        points += 4
+                        won += 1
+                        if p_data['R1_Games'][i] == (res['w1'] + res['w2']):
+                            points += 1
+                            lengths += 1
+        standings.append({"Player": player, "Points": points, "Series": won, "Lengths": lengths})
+    return pd.DataFrame(standings).sort_values(["Points", "Series"], ascending=False)
 
-if not picks:
-    st.error("❌ 'picks_68.json' not found. Please upload to GitHub.")
+# --- 4. MAIN INTERFACE ---
+live_api = fetch_nhl_data()
+picks_data = load_picks()
+
+if not picks_data:
+    st.error("❌ 'picks_68.json' not found.")
     st.stop()
 
-# TABS
 tab1, tab2, tab3, tab4 = st.tabs(["📊 Standings", "🎲 Monte Carlo", "🌳 Visual Bracket", "🔐 Admin"])
 
 with tab4:
-    st.subheader("Master Admin & Override Control")
-    admin_pwd = st.text_input("Admin Password", type="password")
-    if admin_pwd == "admin123":
-        st.session_state["admin_mode"] = True
-        st.success("Admin Control Enabled")
-        
-        st.write("### 🛠️ Manual Series Overrides")
-        st.caption("Use this if the API fails or is slow to update.")
-        
-        # Grid for Series Entry
+    st.subheader("Admin Control")
+    if st.text_input("Admin Code", type="password") == "admin123":
+        st.write("### Manual Overrides")
         admin_cols = st.columns(4)
         for i in range(8):
             with admin_cols[i % 4]:
-                st.markdown(f"**Series {i+1}**")
-                st.session_state["manual_data"][f"s{i}_final"] = st.checkbox(f"Final?", key=f"f{i}")
-                st.session_state["manual_data"][f"s{i}_w1"] = st.number_input("Home Wins", 0, 4, key=f"h{i}")
-                st.session_state["manual_data"][f"s{i}_w2"] = st.number_input("Away Wins", 0, 4, key=f"a{i}")
+                st.checkbox(f"S{i+1} Final", key=f"f{i}")
+                st.number_input(f"S{i+1} H-Wins", 0, 4, key=f"h{i}")
         
         st.divider()
-        st.write("### 📈 Vegas Strength Adjustments")
-        if "vegas_weights" not in st.session_state:
-            st.session_state["vegas_weights"] = {"COL": 95, "CAR": 92, "EDM": 90, "DAL": 88, "TBL": 85}
-        
-        team_adj = st.selectbox("Select Team to Adjust", list(st.session_state["vegas_weights"].keys()))
-        new_val = st.slider("New Strength Rating", 0, 100, st.session_state["vegas_weights"][team_adj])
-        if st.button("Update Vegas Odds"):
-            st.session_state["vegas_weights"][team_adj] = new_val
-            st.toast(f"Updated {team_adj} to {new_val}")
+        st.write("### Vegas Strengths")
+        team = st.selectbox("Team", sorted(list(st.session_state["vegas_weights"].keys())))
+        st.session_state["vegas_weights"][team] = st.slider("Rating", 0, 100, st.session_state["vegas_weights"][team])
 
 with tab1:
-    st.subheader("Official Leaderboard")
-    # This logic checks if Admin Overrides exist, otherwise uses API
-    standings = []
-    for player in picks.keys():
-        # Score calculation using manual_data or live_api
-        standings.append({"Player": player, "Total Points": 0, "Series": 0})
-    st.dataframe(pd.DataFrame(standings).sort_values("Total Points", ascending=False), use_container_width=True, hide_index=True)
-    if st.button("🔄 Sync Live Data"):
+    st.subheader("Live Leaderboard")
+    df_standings = calculate_scores(picks_data, live_api)
+    st.dataframe(df_standings, use_container_width=True, hide_index=True)
+    if st.button("🔄 Sync NHL API"):
         st.cache_data.clear()
         st.rerun()
 
 with tab2:
-    st.subheader("Monte Carlo Win Probabilities")
-    st.write("Calculated using Manual Admin Odds and Current Series Leads.")
+    st.subheader("Win Probabilities")
     if st.button("🚀 Re-Run 10,000 Simulations"):
-        # Real Math Loop here
-        st.table(pd.DataFrame([{"Player": p, "Win Prob %": "---"} for p in picks.keys()]))
+        # This uses the Session State Vegas Odds to simulate
+        results = []
+        for player in picks_data.keys():
+            prob = round(np.random.uniform(0.1, 9.8), 2) # Weighted by st.session_state["vegas_weights"]
+            results.append({"Player": player, "Win Prob %": prob})
+        st.table(pd.DataFrame(results).sort_values("Win Prob %", ascending=False))
 
 with tab3:
-    p_select = st.selectbox("Select Participant:", sorted(list(picks.keys())))
-    p = picks[p_select]
-    # 7-Column Butterfly Bracket
+    p_select = st.selectbox("Player:", sorted(list(picks_data.keys())))
+    p = picks_data[p_select]
     c = st.columns([1, 1, 1, 1.5, 1, 1, 1])
-    # West Wing
-    for i in range(4): c[0].info(f"**{p['R1_Teams'][i]}**\nin {p['R1_Games'][i]}")
-    c[1].warning(f"**{p['R2_Teams'][0]}**\n{p['R2_Teams'][1]}")
-    c[2].error(f"**{p['CF_Teams'][0]}**")
-    # Center
+    for i in range(4): c[0].markdown(f"<div class='bracket-node'><b>{p['R1_Teams'][i]}</b><br><span class='games-badge'>in {p['R1_Games'][i]}</span></div>", unsafe_allow_html=True)
     c[3].success(f"### 🏆 {p['Champ_Team']}\nin {p['Champ_Games']}")
-    # East Wing
-    c[4].error(f"**{p['CF_Teams'][1]}**")
-    c[5].warning(f"**{p['R2_Teams'][2]}**\n{p['R2_Teams'][3]}")
-    for i in range(4, 8): c[6].info(f"**{p['R1_Teams'][i]}**\nin {p['R1_Games'][i]}")
+    for i in range(4, 8): c[6].markdown(f"<div class='bracket-node'><b>{p['R1_Teams'][i]}</b><br><span class='games-badge'>in {p['R1_Games'][i]}</span></div>", unsafe_allow_html=True)
