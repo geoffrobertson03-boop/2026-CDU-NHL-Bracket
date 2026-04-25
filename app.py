@@ -91,31 +91,51 @@ with tab1:
 
 # --- TAB 2: BUTTERFLY BRACKET ---
 with tab2:
-    st.subheader("Participant Brackets")
-    sel_player = st.selectbox("Select Player:", sorted(picks.keys()))
-    p = picks[sel_player]
+    st.subheader("Visual Bracket")
+    selected = st.selectbox("Select Participant:", sorted(picks.keys()))
+    p = picks[selected]
     
-    def get_val(key, idx):
-        try: return p.get(key, [])[idx]
-        except: return "TBD"
+    # Improved helper to find game picks for future rounds
+    def get_game_pick(round_key, index):
+        try:
+            val = p.get(round_key, [])[index]
+            return f"{val} G"
+        except:
+            return "—" # Fallback if specific pick is missing
 
+    # Layout: [W-R1, W-R2, W-CF, CHAMP, E-CF, E-R2, E-R1]
     c1, c2, c3, c4, c5, c6, c7 = st.columns([1, 1, 1, 1.4, 1, 1, 1])
+    
     with c1: # West R1
-        for i in range(4): st.markdown(f"<div class='b-card'><b>{p['R1_Teams'][i]}</b><br><span class='g-badge'>{p['R1_Games'][i]} Games</span></div>", unsafe_allow_html=True)
-    with c2: # West R2
-        st.markdown(f"<div class='b-card' style='margin-top:40px;'><b>{get_val('R2_Teams', 0)}</b><br><span class='g-badge'>{get_val('R2_Games', 0)} G</span></div>", unsafe_allow_html=True)
-        st.markdown(f"<div class='b-card' style='margin-top:80px;'><b>{get_val('R2_Teams', 1)}</b><br><span class='g-badge'>{get_val('R2_Games', 1)} G</span></div>", unsafe_allow_html=True)
+        for i in range(4): 
+            st.markdown(f"<div class='b-card'><b>{p['R1_Teams'][i]}</b><br><span class='g-badge'>{p['R1_Games'][i]} Games</span></div>", unsafe_allow_html=True)
+    
+    with c2: # West R2 (Semis)
+        st.markdown(f"<div class='b-card' style='margin-top:40px;'><b>{p['R2_Teams'][0]}</b><br><span class='g-badge'>{get_game_pick('R2_Games', 0)}</span></div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='b-card' style='margin-top:80px;'><b>{p['R2_Teams'][1]}</b><br><span class='g-badge'>{get_game_pick('R2_Games', 1)}</span></div>", unsafe_allow_html=True)
+    
     with c3: # West Final
-        st.markdown(f"<div class='b-card' style='margin-top:100px;'><b>{get_val('CF_Teams', 0)}</b><br><span class='g-badge'>{get_val('CF_Games', 0)} G</span></div>", unsafe_allow_html=True)
-    with c4: # Champion
-        st.markdown(f"<div class='champ-card' style='margin-top:80px;'>🏆<h3>{p['Champ_Team']}</h3>in {p['Champ_Games']}</div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='b-card' style='margin-top:110px;'><b>{p['CF_Teams'][0]}</b><br><span class='g-badge'>{get_game_pick('CF_Games', 0)}</span></div>", unsafe_allow_html=True)
+    
+    with c4: # Champion (The Centerpiece)
+        st.markdown(f"""
+            <div class='champ-box' style='margin-top:85px;'>
+                <h1 style='margin:0;'>🏆</h1>
+                <h2 style='margin:10px 0;'>{p['Champ_Team']}</h2>
+                <div class='g-badge' style='background: rgba(255,255,255,0.4);'>PICKED IN {p['Champ_Games']} GAMES</div>
+            </div>
+        """, unsafe_allow_html=True)
+    
     with c5: # East Final
-        st.markdown(f"<div class='b-card' style='margin-top:100px;'><b>{get_val('CF_Teams', 1)}</b><br><span class='g-badge'>{get_val('CF_Games', 1)} G</span></div>", unsafe_allow_html=True)
-    with c6: # East R2
-        st.markdown(f"<div class='b-card' style='margin-top:40px;'><b>{get_val('R2_Teams', 2)}</b><br><span class='g-badge'>{get_val('R2_Games', 2)} G</span></div>", unsafe_allow_html=True)
-        st.markdown(f"<div class='b-card' style='margin-top:80px;'><b>{get_val('R2_Teams', 3)}</b><br><span class='g-badge'>{get_val('R2_Games', 3)} G</span></div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='b-card' style='margin-top:110px;'><b>{p['CF_Teams'][1]}</b><br><span class='g-badge'>{get_game_pick('CF_Games', 1)}</span></div>", unsafe_allow_html=True)
+    
+    with c6: # East R2 (Semis)
+        st.markdown(f"<div class='bracket-card' style='margin-top:40px;'><b>{p['R2_Teams'][2]}</b><br><span class='g-badge'>{get_game_pick('R2_Games', 2)}</span></div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='bracket-card' style='margin-top:80px;'><b>{p['R2_Teams'][3]}</b><br><span class='g-badge'>{get_game_pick('R2_Games', 3)}</span></div>", unsafe_allow_html=True)
+    
     with c7: # East R1
-        for i in range(4, 8): st.markdown(f"<div class='b-card'><b>{p['R1_Teams'][i]}</b><br><span class='g-badge'>{p['R1_Games'][i]} Games</span></div>", unsafe_allow_html=True)
+        for i in range(4, 8): 
+            st.markdown(f"<div class='b-card'><b>{p['R1_Teams'][i]}</b><br><span class='g-badge'>{p['R1_Games'][i]} Games</span></div>", unsafe_allow_html=True)
 
 # --- TAB 3: MONTE CARLO ---
 with tab3:
